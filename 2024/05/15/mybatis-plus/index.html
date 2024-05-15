@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="peng">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2024/05/15/mybatis-plus/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="基于mybatis-plus的代码生成器一，mybatis-plus的简介​	MyBatis-Plus 是一个 Mybatis 增强版工具，在 MyBatis 上扩充了其他功能没有改变其基本功能，为了简化开发提交效率而存在。 ​	官网文档地址：https:&#x2F;&#x2F;baomidou.com&#x2F;  ​	代码生成器(新)文档:  https:&#x2F;&#x2F;baomidou.com&#x2F;pages&#x2F;981406&#x2F;  它的作用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于mp的代码生成器">
+<meta property="og:url" content="http://example.com/2024/05/15/mybatis-plus/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="基于mybatis-plus的代码生成器一，mybatis-plus的简介​	MyBatis-Plus 是一个 Mybatis 增强版工具，在 MyBatis 上扩充了其他功能没有改变其基本功能，为了简化开发提交效率而存在。 ​	官网文档地址：https:&#x2F;&#x2F;baomidou.com&#x2F;  ​	代码生成器(新)文档:  https:&#x2F;&#x2F;baomidou.com&#x2F;pages&#x2F;981406&#x2F;  它的作用">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/static/image-20231113195143873.png">
+<meta property="og:image" content="http://example.com/static/image-20231113195439908.png">
+<meta property="og:image" content="http://example.com/static/image-20231113201715704.png">
+<meta property="og:image" content="http://example.com/static/image-20231113210121964.png">
+<meta property="og:image" content="http://example.com/static/image-20231113210555071.png">
+<meta property="og:image" content="http://example.com/static/image-20231113211858631.png">
+<meta property="article:published_time" content="2024-05-15T11:44:19.806Z">
+<meta property="article:modified_time" content="2024-05-15T11:51:20.256Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/static/image-20231113195143873.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            基于mp的代码生成器 -
+        
+        My blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"en"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Dreams are at your feet","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.5.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/5/14 10:10:10"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="swup-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                My blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer w-full absolute top-0 left-0 bg-background-color">
+        <ul class="drawer-navbar-list flex flex-col justify-start items-center">
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            
+                <h1 class="article-title-regular">基于mp的代码生成器</h1>
+            
+            </div>
+            
+                    
+        
+        
+            <div class="article-header flex flex-row gap-2 items-center">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/redefine-avatar.svg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">peng</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv2</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-05-15 19:44:19</span>
+        <span class="mobile">2024-05-15 19:44:19</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-05-15 19:51:20</span>
+            <span class="mobile">2024-05-15 19:51:20</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body">
+            <h3 id="基于mybatis-plus的代码生成器"><a href="#基于mybatis-plus的代码生成器" class="headerlink" title="基于mybatis-plus的代码生成器"></a>基于mybatis-plus的代码生成器</h3><h5 id="一，mybatis-plus的简介"><a href="#一，mybatis-plus的简介" class="headerlink" title="一，mybatis-plus的简介"></a>一，mybatis-plus的简介</h5><p>​	MyBatis-Plus 是一个 Mybatis 增强版工具，在 MyBatis 上扩充了其他功能没有改变其基本功能，为了简化开发提交效率而存在。</p>
+<p>​	官网文档地址：<a class="link"   target="_blank" rel="noopener" href="https://baomidou.com/" >https://baomidou.com/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>​	代码生成器(新)文档:  <a class="link"   target="_blank" rel="noopener" href="https://baomidou.com/pages/981406/" >https://baomidou.com/pages/981406/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>它的作用就是为了方便我们以后快速开发，因为在大多数的情况下，我们都是适用的三层结构，他的原理就是</p>
+<p>好比造句：</p>
+<p>​     _____________  去_____________   </p>
+<p>例如：我去学校，你去玩，他们中间的都一样，而代码生成器就是起一个自动替换的功能，下面让我们试试吧</p>
+<h5 id="二，一个简单的基于mybatis-plus的程序"><a href="#二，一个简单的基于mybatis-plus的程序" class="headerlink" title="二，一个简单的基于mybatis-plus的程序"></a>二，一个简单的基于mybatis-plus的程序</h5><p>​	首先新建一个spring boot的项目</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../static/image-20231113195143873.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../static/image-20231113195439908.png"
+                      alt="image-20231113195439908"
+                ></p>
+<p>第一步连接数据库<code> application.yml</code></p>
+<div class="highlight-container" data-rel="Yml"><figure class="iseeu highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">9090</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.cj.jdbc.Driver</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/code?serverTimezone=GMT%2b8</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">你的MySQL的密码</span></span><br></pre></td></tr></table></figure></div>
+
+<p>再创建一个表</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE `student` (</span><br><span class="line">  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &#x27;id&#x27;,</span><br><span class="line">  `name` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL COMMENT &#x27;姓名&#x27;,</span><br><span class="line">  `grades` int(11) DEFAULT NULL COMMENT &#x27;成绩&#x27;,</span><br><span class="line">  PRIMARY KEY (`id`)</span><br><span class="line">) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;</span><br></pre></td></tr></table></figure></div>
+
+<p>先测试准备一个启动程序</p>
+<p><code> Test.java</code></p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line">    <span class="meta">@GetMapping</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">test</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;你好&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>然后运行，这样算成功</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../static/image-20231113201715704.png"
+                      alt="image-20231113201715704"
+                ></p>
+<p>然后导入mybatis-plus依赖刷新maven</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- mybatis-plus--&gt;</span><br><span class="line">     &lt;!-- https:<span class="comment">//mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter --&gt;</span></span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;com.baomidou&lt;/groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;mybatis-plus-boot-starter&lt;/artifactId&gt;</span><br><span class="line">          &lt;version&gt;<span class="number">3.5</span><span class="number">.4</span>&lt;/version&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line">      &lt;!--代码生成器--&gt;</span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;com.baomidou&lt;/groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;mybatis-plus-generator&lt;/artifactId&gt;</span><br><span class="line">          &lt;version&gt;<span class="number">3.5</span><span class="number">.1</span>&lt;/version&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line">      &lt;!--需要的引擎 https:<span class="comment">//mvnrepository.com/artifact/org.apache.velocity/velocity --&gt;</span></span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;org.apache.velocity&lt;/groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;velocity&lt;/artifactId&gt;</span><br><span class="line">          &lt;version&gt;<span class="number">1.7</span>&lt;/version&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line">            &lt;!-- https:<span class="comment">//mvnrepository.com/artifact/log4j/log4j --&gt;</span></span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;log4j&lt;/groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;log4j&lt;/artifactId&gt;</span><br><span class="line">          &lt;version&gt;<span class="number">1.2</span><span class="number">.17</span>&lt;/version&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;lombok&lt;/artifactId&gt;</span><br><span class="line">          &lt;optional&gt;<span class="literal">true</span>&lt;/optional&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p><code>MybatisPlusConfig.java</code></p>
+<p>配置文件</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.DbType;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;</span><br><span class="line"><span class="keyword">import</span> org.mybatis.spring.annotation.MapperScan;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="comment">//注解想注入到容器中必须加@Configuration被识别</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@MapperScan(&quot;com.yuan.springboot.mapper&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MybatisPlusConfig</span> &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 添加分页插件</span></span><br><span class="line"><span class="comment">     **/</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> MybatisPlusInterceptor <span class="title function_">mybatisPlusInterceptor</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">MybatisPlusInterceptor</span> <span class="variable">interceptor</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MybatisPlusInterceptor</span>();</span><br><span class="line">        interceptor.addInnerInterceptor(<span class="keyword">new</span> <span class="title class_">PaginationInnerInterceptor</span>(DbType.MYSQL));<span class="comment">//如果配置多个插件,切记分页最后添加</span></span><br><span class="line">        <span class="comment">//interceptor.addInnerInterceptor(new PaginationInnerInterceptor()); 如果有多数据源可以不配具体类型 否则都建议配上具体的DbType</span></span><br><span class="line">        <span class="keyword">return</span> interceptor;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../static/image-20231113210121964.png"
+                      alt="image-20231113210121964"
+                ></p>
+<p>找到以下的文件复制到resources&#x2F;templates</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../static/image-20231113210555071.png"
+                      alt="image-20231113210555071"
+                ></p>
+<p>再测试类中进行测试需要根据自己的需求求改</p>
+<p><code>MybatisPlusCodeApplicationTests.java</code></p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.FastAutoGenerator;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.OutputFile;</span><br><span class="line"><span class="keyword">import</span> org.junit.jupiter.api.Test;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.test.context.SpringBootTest;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MybatisPlusCodeApplicationTests</span> &#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">contextLoads</span><span class="params">()</span> &#123;</span><br><span class="line">        generate();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">generate</span><span class="params">()</span> &#123;</span><br><span class="line">        FastAutoGenerator.create(<span class="string">&quot;jdbc:mysql://localhost:3306/code?serverTimezone=GMT%2b8&quot;</span>, <span class="string">&quot;root&quot;</span>, <span class="string">&quot;yuan0530&quot;</span>)</span><br><span class="line">                .globalConfig(builder -&gt; &#123;</span><br><span class="line">                    builder.author(<span class="string">&quot;自己diy&quot;</span>) <span class="comment">// 设置作者</span></span><br><span class="line">                            .fileOverride() <span class="comment">// 覆盖已生成文件</span></span><br><span class="line">                            .outputDir(<span class="string">&quot;/袁鹏的训练/java-test/mybatis-plus-code/src/main/java/&quot;</span>); <span class="comment">// 指定输出目录</span></span><br><span class="line">                &#125;)</span><br><span class="line">                .packageConfig(builder -&gt; &#123;</span><br><span class="line">                    builder.parent(<span class="string">&quot;com.example&quot;</span>) <span class="comment">// 设置父包名</span></span><br><span class="line">                            .moduleName(<span class="string">&quot;&quot;</span>) <span class="comment">// 设置父包模块名</span></span><br><span class="line">                            .pathInfo(Collections.singletonMap(OutputFile.mapperXml, <span class="string">&quot;/袁鹏的训练/java-test/mybatis-plus-code/src/main/resources/mapper/&quot;</span>)); <span class="comment">// 设置mapperXml生成路径</span></span><br><span class="line">                &#125;)</span><br><span class="line">                .strategyConfig(builder -&gt; &#123;</span><br><span class="line">                    builder.entityBuilder().enableLombok();</span><br><span class="line">                    builder.mapperBuilder().enableMapperAnnotation().build();</span><br><span class="line">                    builder.controllerBuilder().enableHyphenStyle()  <span class="comment">// 开启驼峰转连字符</span></span><br><span class="line">                            .enableRestStyle();  <span class="comment">// 开启生成@RestController 控制器</span></span><br><span class="line">                    builder.addInclude(<span class="string">&quot;student&quot;</span>) <span class="comment">// 设置需要生成的表名就是数据库中创建那个</span></span><br><span class="line">                            .addTablePrefix(<span class="string">&quot;&quot;</span>); <span class="comment">// 设置过滤表前缀</span></span><br><span class="line">                &#125;)</span><br><span class="line"><span class="comment">//                .templateEngine(new FreemarkerTemplateEngine()) // 使用Freemarker引擎模板，默认的是Velocity引擎模板</span></span><br><span class="line">                .execute();</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>运行后生成的文件目录</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../static/image-20231113211858631.png"
+                      alt="image-20231113211858631"
+                ></p>
+<p>还可以自己diy生成的代码</p>
+<p>再<code>controller.java.vm</code>中修改</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> $&#123;<span class="keyword">package</span>.Controller&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.pagination.Page;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> $!&#123;<span class="keyword">package</span>.Service&#125;.$!&#123;table.serviceName&#125;;</span><br><span class="line"><span class="keyword">import</span> $&#123;<span class="keyword">package</span>.Entity&#125;.$&#123;entity&#125;;</span><br><span class="line">#<span class="keyword">if</span>($&#123;superControllerClassPackage&#125;)</span><br><span class="line"><span class="keyword">import</span> $&#123;superControllerClassPackage&#125;;</span><br><span class="line">#end</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * &lt;p&gt;</span></span><br><span class="line"><span class="comment"> * $!&#123;table.comment&#125; 前端控制器</span></span><br><span class="line"><span class="comment"> * &lt;/p&gt;</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> $&#123;author&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@since</span> $&#123;date&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">#<span class="keyword">if</span>($&#123;restControllerStyle&#125;)</span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line">#<span class="keyword">else</span></span><br><span class="line"><span class="meta">@Controller</span></span><br><span class="line">#end</span><br><span class="line"><span class="meta">@RequestMapping(&quot;#if($&#123;package.ModuleName&#125;)/$&#123;package.ModuleName&#125;#end/#if($&#123;controllerMappingHyphenStyle&#125;)$&#123;controllerMappingHyphen&#125;#else$&#123;table.entityPath&#125;#end&quot;)</span></span><br><span class="line">#<span class="keyword">if</span>($&#123;kotlin&#125;)</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">$</span>&#123;table.controllerName&#125;#<span class="keyword">if</span>($&#123;superControllerClass&#125;) : $&#123;superControllerClass&#125;()#end</span><br><span class="line">#<span class="keyword">else</span></span><br><span class="line">#<span class="keyword">if</span>($&#123;superControllerClass&#125;)</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">$</span>&#123;table.controllerName&#125; <span class="keyword">extends</span> <span class="title class_">$</span>&#123;superControllerClass&#125; &#123;</span><br><span class="line">#<span class="keyword">else</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">$</span>&#123;table.controllerName&#125; &#123;</span><br><span class="line">#end</span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    <span class="keyword">private</span> $&#123;table.serviceName&#125; $&#123;table.entityPath&#125;Service;</span><br><span class="line">   </span><br><span class="line">    <span class="meta">@PostMapping</span></span><br><span class="line">    <span class="keyword">public</span> Boolean <span class="title function_">save</span><span class="params">(<span class="meta">@RequestBody</span> $&#123;entity&#125; $&#123;table.entityPath&#125;)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> $&#123;table.entityPath&#125;Service.saveOrUpdate($&#123;table.entityPath&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@DeleteMapping(&quot;/&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Boolean <span class="title function_">delete</span><span class="params">(<span class="meta">@PathVariable</span> Integer id)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> $&#123;table.entityPath&#125;Service.removeById(id);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@GetMapping</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;$&#123;entity&#125;&gt; findAll() &#123;</span><br><span class="line">        <span class="keyword">return</span> $&#123;table.entityPath&#125;Service.list();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@GetMapping(&quot;/&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;$&#123;entity&#125;&gt; findOne(<span class="meta">@PathVariable</span> Integer id) &#123;</span><br><span class="line">        <span class="keyword">return</span> $&#123;table.entityPath&#125;Service.list();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@GetMapping(&quot;/page&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Page&lt;$&#123;entity&#125;&gt; findPage(<span class="meta">@RequestParam</span> Integer pageNum,</span><br><span class="line">                                <span class="meta">@RequestParam</span> Integer pageSize) &#123;</span><br><span class="line">        <span class="keyword">return</span> $&#123;table.entityPath&#125;Service.page(<span class="keyword">new</span> <span class="title class_">Page</span>&lt;&gt;(pageNum, pageSize));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">#end</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>运行后的studentcontroller.java</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.controller;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.pagination.Page;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.example.service.IStudentService;</span><br><span class="line"><span class="keyword">import</span> com.example.entity.Student;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * &lt;p&gt;</span></span><br><span class="line"><span class="comment"> *  前端控制器</span></span><br><span class="line"><span class="comment"> * &lt;/p&gt;</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> 自己diy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@since</span> 2023-11-13</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;//student&quot;)</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StudentController</span> &#123;</span><br><span class="line">    </span><br><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> IStudentService studentService;</span><br><span class="line"></span><br><span class="line"><span class="meta">@PostMapping</span></span><br><span class="line"><span class="keyword">public</span> Boolean <span class="title function_">save</span><span class="params">(<span class="meta">@RequestBody</span> Student student)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> studentService.saveOrUpdate(student);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@DeleteMapping(&quot;/&#123;id&#125;&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Boolean <span class="title function_">delete</span><span class="params">(<span class="meta">@PathVariable</span> Integer id)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> studentService.removeById(id);</span><br><span class="line">        &#125;</span><br><span class="line"><span class="meta">@GetMapping</span></span><br><span class="line"><span class="keyword">public</span> List&lt;Student&gt; <span class="title function_">findAll</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> studentService.list();</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@GetMapping(&quot;/&#123;id&#125;&quot;)</span></span><br><span class="line"><span class="keyword">public</span> List&lt;Student&gt; <span class="title function_">findOne</span><span class="params">(<span class="meta">@PathVariable</span> Integer id)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> studentService.list();</span><br><span class="line">        &#125;</span><br><span class="line"><span class="meta">@GetMapping(&quot;/page&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Page&lt;Student&gt; <span class="title function_">findPage</span><span class="params">(<span class="meta">@RequestParam</span> Integer pageNum,</span></span><br><span class="line"><span class="params"><span class="meta">@RequestParam</span> Integer pageSize)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> studentService.page(<span class="keyword">new</span> <span class="title class_">Page</span>&lt;&gt;(pageNum, pageSize));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>其余的用法就交给你去探索了</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 基于mp的代码生成器</li>
+        <li><strong>Author:</strong> peng</li>
+        <li><strong>Created at
+                :</strong> 2024-05-15 19:44:19</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2024-05-15 19:51:20
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://github.com/PengCanY/2024/05/15/mybatis-plus/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+            This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+            
+
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2024/05/15/gnvm_use/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">GNVM多版本控制器</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/05/15/qianduan/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">常用技术网站推荐</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container">
+                <div class="comments-container pjax">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+ 
+    <div id="waline"></div>
+    <script type="module"  data-swup-reload-script>
+        import { init } from '/js/libs/waline.mjs';
+
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://example.example.com',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
+        }
+
+        if ('true') {
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadWaline);
+        }
+        
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">基于mp的代码生成器</div>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8Emybatis-plus%E7%9A%84%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E5%99%A8"><span class="nav-text">基于mybatis-plus的代码生成器</span></a></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">peng</a>
+        </div>
+        
+            <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.5.0</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+</body>
+</html>

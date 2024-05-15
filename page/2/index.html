@@ -13,14 +13,14 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/"/>
+    <link rel="canonical" href="http://example.com/page/2/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
         <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/page/2/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
@@ -108,58 +108,36 @@
 <main class="page-container" id="swup">
 
     
-        
-    <style>
-        .home-banner-container {
-            background: transparent !important;
-        }
+        <style>
+    .home-article-item,
+    .sidebar-links,
+    .sidebar-content,
+    a.page-number,
+    a.extend,
+    .sidebar-links .links:hover,
+    .right-bottom-tools,
+    footer.footer {
+        background-color: var(--background-color-transparent-80) !important;
+    }
+    .right-bottom-tools:hover,
+    a.page-number:hover,
+    a.extend:hover {
+        background-color: var(--primary-color) !important;
+    }
+    .site-info,
+    .home-article-sticky-label {
+        background-color: var(--background-color-transparent-15) !important;
+    }
+    .home-article-sticky-label {
+        backdrop-filter: none !important;
+    }
+    .home-banner-background {
+        filter: blur(15px);
+    }
+</style>
 
-        .home-article-item,
-        .sidebar-links,
-        .sidebar-content,
-        a.page-number,
-        a.extend,
-        .sidebar-links .links:hover,
-        .right-bottom-tools,
-        footer.footer {
-            background-color: var(--background-color-transparent-80) !important;
-        }
-
-        .right-bottom-tools:hover,
-        a.page-number:hover,
-        a.extend:hover {
-            background-color: var(--primary-color) !important;
-        }
-
-        .site-info,
-        .home-article-sticky-label {
-            background-color: var(--background-color-transparent-15) !important;
-        }
-
-        .home-article-sticky-label {
-            backdrop-filter: none !important;
-        }
-    </style>
-
-    <div class="home-banner-background transition-fade">
-    </div>
-
-
-<div class="home-banner-container flex justify-center items-center transition-fade">
-    <div class="content flex justify-center items-center">
-        <div class="description flex flex-col justify-center items-center"
-        
-        >
-            Dreams are at your feet
-            
-            
-                <p><i id="subtitle"></i></p>
-            
-        </div>
-        
-    </div>
+<div class="home-banner-background">
 </div>
-
 
 
     
@@ -170,7 +148,7 @@
         <div class="main-content-header">
             <header class="navbar-container">
     
-    <div class="navbar-content has-home-banner">
+    <div class="navbar-content">
         <div class="left">
             
             <a class="logo-title" href="/">
@@ -298,390 +276,14 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2024/05/15/index%20copy/">
-                        GITBook
+                    <a href="/2024/05/15/create/">
+                        创建项目
                     </a>
                 </h3>
 
                 <div class="home-article-content markdown-body">
                     
-                        GItBookGitBook 是什么？其实用一句话就可以概括，它是一个 能将使用 Markown 语法的 md 格式文档，快速制作成各种格式电子书的工具。
-常被用于编写文档或者电子书，特点是方便简洁，易于使用。只要熟悉轻量级标记语法的 Markdow...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed May 15 2024 20:07:39 GMT+0800">
-                
-                    2024-05-15
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/05/15/index%20copy/">Read more<span class="seo-reader-text">GITBook</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/05/15/plugins/">
-                        插件
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        插件1.目录页内目录
-gitbook-plugin-page-treeview用于在页面生成目录
-123456789101112&#123;    &quot;plugins&quot;: [        &quot;page-treeview&q...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed May 15 2024 20:07:39 GMT+0800">
-                
-                    2024-05-15
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/05/15/plugins/">Read more<span class="seo-reader-text">插件</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/05/15/node.js_installation_tutorial/">
-                        node安装教程(windows)
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        node.js安装教程（windows）1.Node.js简介Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时。Node.js 使用高效、轻量级的事件驱动、非阻塞 I&#x2F;O 模型。它的包生态系统，npm，是...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed May 15 2024 20:03:50 GMT+0800">
-                
-                    2024-05-15
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/05/15/node.js_installation_tutorial/">Read more<span class="seo-reader-text">node安装教程(windows)</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/05/15/team-development/">
-                        代码风格控制
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        代码风格控制(团队开发，初学跳过)1.ESlint
-eslint 应主要负责校验语法校验，prettier 应主要负责代码格式化
-
-1pnpm i eslint -D
-
-1.pnpm create @eslint&#x2F;config
-How wo...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed May 15 2024 19:57:21 GMT+0800">
-                
-                    2024-05-15
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/05/15/team-development/">Read more<span class="seo-reader-text">代码风格控制</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/05/15/gnvm_use/">
-                        GNVM多版本控制器
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        GNVM-Node.js 多版本管理器1.GNVM介绍GNVM 这个东西的不如 T 好看，没有 NVM 适配的环境多，但是它适配 Windows而且不用删除原有node[绝杀]，当然它也有它的优势，不依赖任何环境，无需配置，多线程下载，内置 TAOB...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed May 15 2024 19:46:27 GMT+0800">
-                
-                    2024-05-15
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/05/15/gnvm_use/">Read more<span class="seo-reader-text">GNVM多版本控制器</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/05/15/mybatis-plus/">
-                        基于mp的代码生成器
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        基于mybatis-plus的代码生成器一，mybatis-plus的简介​	MyBatis-Plus 是一个 Mybatis 增强版工具，在 MyBatis 上扩充了其他功能没有改变其基本功能，为了简化开发提交效率而存在。
-​	官网文档地址：htt...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed May 15 2024 19:44:19 GMT+0800">
-                
-                    2024-05-15
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/05/15/mybatis-plus/">Read more<span class="seo-reader-text">基于mp的代码生成器</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/05/15/qianduan/">
-                        常用技术网站推荐
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        常用技术网站推荐前端网站
-
-
-vue3 官方中文文档 
-vite 官方中文文档 
-element-plus 官方中文文档 
-
-
-
-pinia 官方中文文档 
-vue-router 官方中文文档 
-Tailwind CSS 官方文档 
-
-
-vitest...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed May 15 2024 19:34:52 GMT+0800">
-                
-                    2024-05-15
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/05/15/qianduan/">Read more<span class="seo-reader-text">常用技术网站推荐</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/05/15/setting/">
-                        云服务器配置
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        云服务器配置一、JDK环境安装1.查看Java版本1java -version
-
-如果出现command not found提示，说明没有安装过Java，否则需要卸载
-2.上传Java安装包123cd /usr // 切换至usr目录ls // 查看...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed May 15 2024 19:34:13 GMT+0800">
-                
-                    2024-05-15
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/05/15/setting/">Read more<span class="seo-reader-text">云服务器配置</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/05/15/specification/">
-                        git提交规范
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        提交规范feat: 增加新功能
-fix: 修复问题&#x2F;BUG
-style: 代码风格相关无影响运行结果的
-perf: 优化&#x2F;性能提升
-refactor: 重构
-revert: 撤销修改
-test: 测试相关
-docs: 文档&#x2...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed May 15 2024 19:32:50 GMT+0800">
-                
-                    2024-05-15
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/05/15/specification/">Read more<span class="seo-reader-text">git提交规范</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/05/15/index/">
-                        github
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        Github在进行项目开发时，都会用到版本控制工具来记录开发过程对项目的更改。有很多可以控制版本的工具，为了项目的合作与代码的版本控制。项目组使用Git进行版本控制，其常用代码托管平台就是大名鼎鼎的Github，在这里记录一些常见的代码。
+                        创建项目
 
                     
                 </div>
@@ -699,7 +301,49 @@ docs: 文档&#x2...
         
     </div>
 
-    <a href="/2024/05/15/index/">Read more<span class="seo-reader-text">github</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2024/05/15/create/">Read more<span class="seo-reader-text">创建项目</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2024/05/15/command/">
+                        git常用命令
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        git常用命令拉取代码1git clone xxx.git
+
+创建分支12345git branch dev# orgit checkout -b dev# orgit switch -c dev
+
+切换本地分支123git checkout dev...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed May 15 2024 19:32:50 GMT+0800">
+                
+                    2024-05-15
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2024/05/15/command/">Read more<span class="seo-reader-text">git常用命令</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -708,7 +352,7 @@ docs: 文档&#x2...
 
     <div class="home-paginator">
         <div class="paginator">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa-regular fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa-regular fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
 </div>
 
     </div>

@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="peng">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2024/05/15/setting/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="云服务器配置一、JDK环境安装1.查看Java版本1java -version  如果出现command not found提示，说明没有安装过Java，否则需要卸载 2.上传Java安装包123cd &#x2F;usr &#x2F;&#x2F; 切换至usr目录ls &#x2F;&#x2F; 查看当前目录中所有文件的文件名mkdir java &#x2F;&#x2F; 创建名称为java的文件夹  上传jdk到&#x2F;usr&#x2F;java 3.解压123cd javalst">
+<meta property="og:type" content="article">
+<meta property="og:title" content="云服务器配置">
+<meta property="og:url" content="http://example.com/2024/05/15/setting/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="云服务器配置一、JDK环境安装1.查看Java版本1java -version  如果出现command not found提示，说明没有安装过Java，否则需要卸载 2.上传Java安装包123cd &#x2F;usr &#x2F;&#x2F; 切换至usr目录ls &#x2F;&#x2F; 查看当前目录中所有文件的文件名mkdir java &#x2F;&#x2F; 创建名称为java的文件夹  上传jdk到&#x2F;usr&#x2F;java 3.解压123cd javalst">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-05-15T11:34:13.478Z">
+<meta property="article:modified_time" content="2024-05-15T11:39:26.013Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            云服务器配置 -
+        
+        My blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"en"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Dreams are at your feet","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.5.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/5/14 10:10:10"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="swup-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                My blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer w-full absolute top-0 left-0 bg-background-color">
+        <ul class="drawer-navbar-list flex flex-col justify-start items-center">
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            
+                <h1 class="article-title-regular">云服务器配置</h1>
+            
+            </div>
+            
+                    
+        
+        
+            <div class="article-header flex flex-row gap-2 items-center">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/redefine-avatar.svg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">peng</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv2</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-05-15 19:34:13</span>
+        <span class="mobile">2024-05-15 19:34:13</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-05-15 19:39:26</span>
+            <span class="mobile">2024-05-15 19:39:26</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body">
+            <h1 id="云服务器配置"><a href="#云服务器配置" class="headerlink" title="云服务器配置"></a>云服务器配置</h1><h2 id="一、JDK环境安装"><a href="#一、JDK环境安装" class="headerlink" title="一、JDK环境安装"></a>一、JDK环境安装</h2><h3 id="1-查看Java版本"><a href="#1-查看Java版本" class="headerlink" title="1.查看Java版本"></a>1.查看<code>Java</code>版本</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure></div>
+
+<p>如果出现command not found提示，说明没有安装过Java，否则需要卸载</p>
+<h3 id="2-上传Java安装包"><a href="#2-上传Java安装包" class="headerlink" title="2.上传Java安装包"></a>2.上传<code>Java</code>安装包</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr // 切换至usr目录</span><br><span class="line">ls // 查看当前目录中所有文件的文件名</span><br><span class="line">mkdir java // 创建名称为java的文件夹</span><br></pre></td></tr></table></figure></div>
+
+<p>上传<code>jdk</code>到<code>/usr/java</code></p>
+<h3 id="3-解压"><a href="#3-解压" class="headerlink" title="3.解压"></a>3.解压</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd java</span><br><span class="line">ls</span><br><span class="line">tar -zxcf (jdk包名称).tar.gz</span><br></pre></td></tr></table></figure></div>
+
+<p>4.删除安装包</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf (jdk包名称).tar.gz // 删除指定包</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="5-配置jdk"><a href="#5-配置jdk" class="headerlink" title="5.配置jdk"></a>5.配置<code>jdk</code></h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>[!NOTE]</p>
+<p>英文状态下，按下键盘 i 键或者按 shift + A，使之进入可编辑状态</p>
+</blockquote>
+<p>在最后一行，添加如下代码</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#java environment</span><br><span class="line">export JAVA_HOME=/usr/java/(jdk名称)</span><br><span class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/jre/lib/rt.jar:$&#123;JAVA_HOME&#125;/lib/dt.jar:$&#123;JAVA_HOME&#125;/lib/tools.jar</span><br><span class="line">export PATH=$PATH:$&#123;JAVA_HOME&#125;/bin</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>[!NOTE]</p>
+<p>按下键盘 <code>esc</code> 键，取消编辑状态</p>
+<p>区分编辑和非编辑状态，看是否有<code>INSERT</code>标志</p>
+<p>退出编辑状态后，按下<code>:wq</code>回车，进行保存并退出。(当输入有误时，或者文件被改乱，则按 <code>:q!</code> 进行退出且不保存，然后重新进行即可)</p>
+</blockquote>
+<h3 id="6-让环境变量生效"><a href="#6-让环境变量生效" class="headerlink" title="6.让环境变量生效"></a>6.让环境变量生效</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure></div>
+
+<p>下方没提示任何信息，则表示配置成功，否则都表示配置未成功</p>
+<h3 id="7、检查是否配置成功"><a href="#7、检查是否配置成功" class="headerlink" title="7、检查是否配置成功"></a>7、检查是否配置成功</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure></div>
+
+<p>出现信息则为成功</p>
+<h2 id="二、MySql环境安装"><a href="#二、MySql环境安装" class="headerlink" title="二、MySql环境安装"></a>二、MySql环境安装</h2><h3 id="1-上传MySql安装包"><a href="#1-上传MySql安装包" class="headerlink" title="1.上传MySql安装包"></a>1.上传<code>MySql</code>安装包</h3><p>上传至<code>opt</code>目录下</p>
+<h3 id="2-检查是否安装过MySql"><a href="#2-检查是否安装过MySql" class="headerlink" title="2.检查是否安装过MySql"></a>2.检查是否安装过<code>MySql</code></h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa|grep mysql</span><br></pre></td></tr></table></figure></div>
+
+<p>若后面有其他提示，则表示已经安装过<code>Mysql</code>，需要进行卸载。回车过后，没有任何提示信息，则直接跳过，执行下一步操作即可</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum remove mysql</span><br><span class="line">rpm –qa|grep mysql</span><br><span class="line">rpm –e mysql_libs</span><br><span class="line">rpm -e --nodeps mysql_libs</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="3-检查是否安装过mariadb"><a href="#3-检查是否安装过mariadb" class="headerlink" title="3.检查是否安装过mariadb"></a>3.检查是否安装过<code>mariadb</code></h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm –qa|grep maridb</span><br></pre></td></tr></table></figure></div>
+
+<p>若回车执行后，下方没有任何提示信息，则可以跳过此步骤，执行下一步。若有，则进行卸载操作</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -e --nodeps mariadb-libs</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="4-安装MySql依赖包"><a href="#4-安装MySql依赖包" class="headerlink" title="4.安装MySql依赖包"></a>4.安装<code>MySql</code>依赖包</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install -y libaio</span><br><span class="line">yum install -y numactl</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="5-解压MySql"><a href="#5-解压MySql" class="headerlink" title="5.解压MySql"></a>5.解压<code>MySql</code></h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf (文件名).tar.gz</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="6-重命名并移动位置"><a href="#6-重命名并移动位置" class="headerlink" title="6.重命名并移动位置"></a>6.重命名并移动位置</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv (原文件名) mysql</span><br></pre></td></tr></table></figure></div>
+
+<p>将 <code>/opt/mysql</code>文件夹移动到 <code>/usr/local</code>下</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /opt/mysql /usr/local/</span><br></pre></td></tr></table></figure></div>
+
+<p>换到<code>/usr/local/mysql</code>目录下，并在该目录下，创建<code>mysqldb</code>文件夹</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/mysql</span><br><span class="line">mkdir mysqldb</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="7-MySql安装目录并赋予权限"><a href="#7-MySql安装目录并赋予权限" class="headerlink" title="7.MySql安装目录并赋予权限"></a>7.<code>MySql</code>安装目录并赋予权限</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod -R 777 /usr/local/mysql</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="8-创建MySql组和用户"><a href="#8-创建MySql组和用户" class="headerlink" title="8.创建MySql组和用户"></a>8.创建<code>MySql</code>组和用户</h3><p>切换到<code>usr/local/mysql</code>目录下；并创建组</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupadd mysql</span><br></pre></td></tr></table></figure></div>
+
+<p>创建用户(-s &#x2F;bin&#x2F;false 参数指定mysql用户仅拥有所有权，而没有登录权限)</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd –r –g mysql –s /bin/false mysql</span><br></pre></td></tr></table></figure></div>
+
+<p>将用户添加到组中</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown –R mysql:mysql ./</span><br></pre></td></tr></table></figure></div>
+
+<p>查看是否添加成功</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id mysql</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="9-修改MySql配置文件"><a href="#9-修改MySql配置文件" class="headerlink" title="9.修改MySql配置文件"></a>9.修改<code>MySql</code>配置文件</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/my.cnf</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line"># 设置3306端口</span><br><span class="line">port=3306</span><br><span class="line"># 设置mysql的安装目录</span><br><span class="line">basedir=/usr/local/mysql</span><br><span class="line"># 设置mysql数据库的数据的存放目录</span><br><span class="line">datadir=/usr/local/mysql/mysqldb</span><br><span class="line"># 允许最大连接数</span><br><span class="line">max_connections=10000</span><br><span class="line"># 允许连接失败的次数。这是为了防止有人从该主机试图攻击数据库系统</span><br><span class="line">max_connect_errors=10</span><br><span class="line"># 服务端使用的字符集默认为UTF8</span><br><span class="line">character-set-server=utf8mb4</span><br><span class="line"># 创建新表时将使用的默认存储引擎</span><br><span class="line">default-storage-engine=INNODB</span><br><span class="line"># 默认使用“mysql_native_password”插件认证</span><br><span class="line">default_authentication_plugin=mysql_native_password</span><br><span class="line"># 是否对sql语句大小写敏感，1表示不敏感</span><br><span class="line">lower_case_table_names = 1</span><br><span class="line">[mysql]</span><br><span class="line"># 设置mysql客户端默认字符集</span><br><span class="line">default-character-set=utf8mb4</span><br><span class="line">[client]</span><br><span class="line"># 设置mysql客户端连接服务端时默认使用的端口</span><br><span class="line">port=3306</span><br><span class="line">default-character-set=utf8mb4</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="10-安装MySql"><a href="#10-安装MySql" class="headerlink" title="10.安装MySql"></a>10.安装<code>MySql</code></h3><p>切换到<code> /usr/local/mysql/bin</code> 目录下，执行安装操作</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mysqld --initialize --console</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>[!WARNING]</p>
+<p>初始化安装成功后，一定要将初始化密码记住</p>
+<p>A temporary password is generated for root@localhost: &gt;  <strong>这句话后面的这里的乱码就是初始密码</strong></p>
+</blockquote>
+<h3 id="11-启动MySql服务"><a href="#11-启动MySql服务" class="headerlink" title="11.启动MySql服务"></a>11.启动<code>MySql</code>服务</h3><p>给<code>/usr/local/mysql</code>目录赋予权限</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod -R 777 /usr/local/mysql</span><br></pre></td></tr></table></figure></div>
+
+<p>赋予权限完成后，切换到<code> /usr/local/mysql/support-files</code>目录下，执行<code>mysql.server start</code>命令，有<code>SUCCESS</code>提示代表成功，否则都为失败</p>
+<h3 id="12-将MySql添加到系统进程中"><a href="#12-将MySql添加到系统进程中" class="headerlink" title="12.将MySql添加到系统进程中"></a>12.将<code>MySql</code>添加到系统进程中</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/local/mysql/support-files/mysql.server /etc/init.d/mysqld</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="13-设置MySql自动启动"><a href="#13-设置MySql自动启动" class="headerlink" title="13.设置MySql自动启动"></a>13.设置<code>MySql</code>自动启动</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod +x /etc/init.d/mysqld</span><br><span class="line">systemctl enable mysqld</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="14-修改root登录密码"><a href="#14-修改root登录密码" class="headerlink" title="14.修改root登录密码"></a>14.修改root登录密码</h3><p>切换到 <code>/usr/local/mysql/bin</code> 目录下执行</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mysql -uroot -p</span><br></pre></td></tr></table></figure></div>
+
+<p>进入mysql操作</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter user &#x27;root&#x27;@&#x27;localhost&#x27; IDENTIFIED WITH mysql_native_password BY &#x27;密码&#x27;;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="15-设置允许远程登录"><a href="#15-设置允许远程登录" class="headerlink" title="15.设置允许远程登录"></a>15.设置允许远程登录</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">update user set user.Host=&#x27;%&#x27; where user.User=&#x27;root&#x27;;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure></div>
+
+<p>设置好后，输入quit退出mysql操作</p>
+<h3 id="16-重启服务并测试"><a href="#16-重启服务并测试" class="headerlink" title="16.重启服务并测试"></a>16.重启服务并测试</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart mysql</span><br><span class="line">systemctl status mysql</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="三、Redis环境安装及配置"><a href="#三、Redis环境安装及配置" class="headerlink" title="三、Redis环境安装及配置"></a>三、Redis环境安装及配置</h2><h3 id="1-安装gcc依赖"><a href="#1-安装gcc依赖" class="headerlink" title="1.安装gcc依赖"></a>1.安装gcc依赖</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install –y gcc</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2-下载并解压安装包"><a href="#2-下载并解压安装包" class="headerlink" title="2.下载并解压安装包"></a>2.下载并解压安装包</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget http://download.redis.io/releases/(所需版本).tar.gz</span><br><span class="line">ls</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf (所需版本).tar.gz</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="3-安装编译redis"><a href="#3-安装编译redis" class="headerlink" title="3.安装编译redis"></a>3.安装编译redis</h3><p>切换至解压后的目录</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">make</span><br><span class="line">make install PREFIX=/usr/local/redis</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="4-设置后台启动"><a href="#4-设置后台启动" class="headerlink" title="4.设置后台启动"></a>4.设置后台启动</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//将redis的源码目录中复制redis.conf 到 redis的安装目录</span><br><span class="line">cp /usr/local/redis-5.0.3/redis.conf /usr/local/redis/bin </span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/redis/bin</span><br><span class="line">vi redis.conf</span><br></pre></td></tr></table></figure></div>
+
+<p>将<code>daemonize no</code> 改为<code> daemonize yes</code></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 使修改生效</span><br><span class="line">./redis-server redis.conf</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="5-设置开机启动"><a href="#5-设置开机启动" class="headerlink" title="5.设置开机启动"></a>5.设置开机启动</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi  /etc/systemd/system/redis.service</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=redis-server</span><br><span class="line">After=network.target</span><br><span class="line"> </span><br><span class="line">[Service]</span><br><span class="line">Type=forking</span><br><span class="line">ExecStart=/usr/local/redis/bin/redis-server /usr/local/redis/bin/redis.conf</span><br><span class="line">PrivateTmp=true</span><br><span class="line"> </span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure></div>
+
+<p>设置开机启动</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl start redis.service</span><br><span class="line">systemctl enable redis.service</span><br><span class="line">ln -s /usr/local/redis/bin/redis-cli /usr/bin/redis</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="6-设置远程连接redis，并设置密码"><a href="#6-设置远程连接redis，并设置密码" class="headerlink" title="6.设置远程连接redis，并设置密码"></a>6.设置远程连接redis，并设置密码</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi  /usr/local/redis/bin/redis.conf</span><br></pre></td></tr></table></figure></div>
+
+<p>将bind 127.0.0.1 修改为 bind 0.0.0.0</p>
+<p>设置密码，找到下面这一行<code>#requirepass foobared </code>去掉注释，并修改密码为所需密码</p>
+<p>重启服务</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart redis.service</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="四、Nginx环境安装"><a href="#四、Nginx环境安装" class="headerlink" title="四、Nginx环境安装"></a>四、Nginx环境安装</h2><h3 id="1-下载并解压安装包"><a href="#1-下载并解压安装包" class="headerlink" title="1.下载并解压安装包"></a>1.下载并解压安装包</h3><p>切换到<code>usr/local</code>目录</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://nginx.org/download/(nginx版本号).tar.gz</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxcf (nginx版本号).tar.gz</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h3><p>安装<code>nginx</code>依赖库</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum install -y gcc-c++</span><br><span class="line">yum install -y pcre pcre-devel</span><br><span class="line">yum install -y zlib zlib-devel</span><br><span class="line">yum install -y openssl openssl-devel</span><br></pre></td></tr></table></figure></div>
+
+<p>切换到<code>nginx</code>解压目录下</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br><span class="line">make</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="3-设置nginx开机启动"><a href="#3-设置nginx开机启动" class="headerlink" title="3.设置nginx开机启动"></a>3.设置nginx开机启动</h3><p>切换到 <code>/lib/systemd/system</code> 目录下 打开<code> nginx.service</code>文件</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=nginx </span><br><span class="line">After=network.target </span><br><span class="line">   </span><br><span class="line">[Service] </span><br><span class="line">Type=forking </span><br><span class="line">ExecStart=/usr/local/nginx/sbin/nginx</span><br><span class="line">ExecReload=/usr/local/nginx/sbin/nginx reload</span><br><span class="line">ExecStop=/usr/local/nginx/sbin/nginx quit</span><br><span class="line">PrivateTmp=true </span><br><span class="line">   </span><br><span class="line">[Install] </span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure></div>
+
+<p>修改完成后，保存并退出，执行以下命令</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable nginx.service</span><br></pre></td></tr></table></figure></div>
+
+<p>执行<code>systemctl start nginx.service</code>启动<code>nginx</code>服务</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start nginx.service</span><br></pre></td></tr></table></figure></div>
+
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 云服务器配置</li>
+        <li><strong>Author:</strong> peng</li>
+        <li><strong>Created at
+                :</strong> 2024-05-15 19:34:13</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2024-05-15 19:39:26
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://github.com/PengCanY/2024/05/15/setting/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+            This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+            
+
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2024/05/15/qianduan/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">常用技术网站推荐</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/05/15/specification/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">git提交规范</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container">
+                <div class="comments-container pjax">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+ 
+    <div id="waline"></div>
+    <script type="module"  data-swup-reload-script>
+        import { init } from '/js/libs/waline.mjs';
+
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://example.example.com',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
+        }
+
+        if ('true') {
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadWaline);
+        }
+        
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">云服务器配置</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE"><span class="nav-text">云服务器配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81JDK%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85"><span class="nav-text">一、JDK环境安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%9F%A5%E7%9C%8BJava%E7%89%88%E6%9C%AC"><span class="nav-text">1.查看Java版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%B8%8A%E4%BC%A0Java%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-text">2.上传Java安装包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%A7%A3%E5%8E%8B"><span class="nav-text">3.解压</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E9%85%8D%E7%BD%AEjdk"><span class="nav-text">5.配置jdk</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E8%AE%A9%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%94%9F%E6%95%88"><span class="nav-text">6.让环境变量生效</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7%E3%80%81%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E9%85%8D%E7%BD%AE%E6%88%90%E5%8A%9F"><span class="nav-text">7、检查是否配置成功</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81MySql%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85"><span class="nav-text">二、MySql环境安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%B8%8A%E4%BC%A0MySql%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-text">1.上传MySql安装包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E8%BF%87MySql"><span class="nav-text">2.检查是否安装过MySql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E8%BF%87mariadb"><span class="nav-text">3.检查是否安装过mariadb</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%AE%89%E8%A3%85MySql%E4%BE%9D%E8%B5%96%E5%8C%85"><span class="nav-text">4.安装MySql依赖包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E8%A7%A3%E5%8E%8BMySql"><span class="nav-text">5.解压MySql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E9%87%8D%E5%91%BD%E5%90%8D%E5%B9%B6%E7%A7%BB%E5%8A%A8%E4%BD%8D%E7%BD%AE"><span class="nav-text">6.重命名并移动位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-MySql%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95%E5%B9%B6%E8%B5%8B%E4%BA%88%E6%9D%83%E9%99%90"><span class="nav-text">7.MySql安装目录并赋予权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E5%88%9B%E5%BB%BAMySql%E7%BB%84%E5%92%8C%E7%94%A8%E6%88%B7"><span class="nav-text">8.创建MySql组和用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E4%BF%AE%E6%94%B9MySql%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-text">9.修改MySql配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E5%AE%89%E8%A3%85MySql"><span class="nav-text">10.安装MySql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E5%90%AF%E5%8A%A8MySql%E6%9C%8D%E5%8A%A1"><span class="nav-text">11.启动MySql服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E5%B0%86MySql%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%B3%BB%E7%BB%9F%E8%BF%9B%E7%A8%8B%E4%B8%AD"><span class="nav-text">12.将MySql添加到系统进程中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-%E8%AE%BE%E7%BD%AEMySql%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8"><span class="nav-text">13.设置MySql自动启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-%E4%BF%AE%E6%94%B9root%E7%99%BB%E5%BD%95%E5%AF%86%E7%A0%81"><span class="nav-text">14.修改root登录密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-%E8%AE%BE%E7%BD%AE%E5%85%81%E8%AE%B8%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95"><span class="nav-text">15.设置允许远程登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-%E9%87%8D%E5%90%AF%E6%9C%8D%E5%8A%A1%E5%B9%B6%E6%B5%8B%E8%AF%95"><span class="nav-text">16.重启服务并测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81Redis%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE"><span class="nav-text">三、Redis环境安装及配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85gcc%E4%BE%9D%E8%B5%96"><span class="nav-text">1.安装gcc依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%A7%A3%E5%8E%8B%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-text">2.下载并解压安装包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%AE%89%E8%A3%85%E7%BC%96%E8%AF%91redis"><span class="nav-text">3.安装编译redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E8%AE%BE%E7%BD%AE%E5%90%8E%E5%8F%B0%E5%90%AF%E5%8A%A8"><span class="nav-text">4.设置后台启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8"><span class="nav-text">5.设置开机启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5redis%EF%BC%8C%E5%B9%B6%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81"><span class="nav-text">6.设置远程连接redis，并设置密码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81Nginx%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85"><span class="nav-text">四、Nginx环境安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%A7%A3%E5%8E%8B%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-text">1.下载并解压安装包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%AE%89%E8%A3%85"><span class="nav-text">2.安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%AE%BE%E7%BD%AEnginx%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8"><span class="nav-text">3.设置nginx开机启动</span></a></li></ol></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">peng</a>
+        </div>
+        
+            <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.5.0</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="peng">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2024/05/15/team-development/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="代码风格控制(团队开发，初学跳过)1.ESlint eslint 应主要负责校验语法校验，prettier 应主要负责代码格式化  1pnpm i eslint -D  1.pnpm create @eslint&#x2F;config How would you like to use ESLint? （你想如何使用 ESLint?）To check syntax, find problems,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="代码风格控制">
+<meta property="og:url" content="http://example.com/2024/05/15/team-development/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="代码风格控制(团队开发，初学跳过)1.ESlint eslint 应主要负责校验语法校验，prettier 应主要负责代码格式化  1pnpm i eslint -D  1.pnpm create @eslint&#x2F;config How would you like to use ESLint? （你想如何使用 ESLint?）To check syntax, find problems,">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/static/eslint.png">
+<meta property="article:published_time" content="2024-05-15T11:57:21.191Z">
+<meta property="article:modified_time" content="2024-05-15T12:01:43.315Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/static/eslint.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            代码风格控制 -
+        
+        My blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"en"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Dreams are at your feet","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.5.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/5/14 10:10:10"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="swup-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                My blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer w-full absolute top-0 left-0 bg-background-color">
+        <ul class="drawer-navbar-list flex flex-col justify-start items-center">
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            
+                <h1 class="article-title-regular">代码风格控制</h1>
+            
+            </div>
+            
+                    
+        
+        
+            <div class="article-header flex flex-row gap-2 items-center">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/redefine-avatar.svg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">peng</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv2</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-05-15 19:57:21</span>
+        <span class="mobile">2024-05-15 19:57:21</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-05-15 20:01:43</span>
+            <span class="mobile">2024-05-15 20:01:43</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body">
+            <h2 id="代码风格控制-团队开发，初学跳过"><a href="#代码风格控制-团队开发，初学跳过" class="headerlink" title="代码风格控制(团队开发，初学跳过)"></a>代码风格控制(团队开发，初学跳过)</h2><h3 id="1-ESlint"><a href="#1-ESlint" class="headerlink" title="1.ESlint"></a>1.ESlint</h3><blockquote>
+<p><strong><code>eslint</code> 应主要负责校验语法校验，<code>prettier</code> 应主要负责代码格式化</strong></p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm i eslint -D</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="1-pnpm-create-eslint-config"><a href="#1-pnpm-create-eslint-config" class="headerlink" title="1.pnpm create @eslint&#x2F;config"></a>1.pnpm create @eslint&#x2F;config</h4><ul>
+<li><p><strong>How would you like to use ESLint? （你想如何使用 ESLint?）</strong><br>To check syntax, find problems, and enforce code style（检查语法、发现问题并强制执行代码风格）</p>
+</li>
+<li><p><strong>What type of modules does your project use?（你的项目使用哪种类型的模块?）</strong></p>
+<p>JavaScript modules (import&#x2F;export)</p>
+</li>
+<li><p><strong>Which framework does your project use? （你的项目使用哪种框架?）</strong></p>
+<p>Vue.js</p>
+</li>
+<li><p><strong>Does your project use TypeScript?（你的项目是否使用 TypeScript？）</strong></p>
+<p>Yes</p>
+</li>
+<li><p><strong>Where does your code run?（你的代码在哪里运行?）</strong><br>选择 Browser 和 Node<em><strong>（按空格键进行选择，选完按回车键确定）</strong></em></p>
+</li>
+<li><p><strong>How would you like to define a style for your project?（你想怎样为你的项目定义风格？）</strong></p>
+<p>Use a popular style guide（使用一种流行的风格指南）</p>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../static/eslint.png"
+                     
+                ></p>
+<h4 id="2-完善-eslintrc-js-的-rules"><a href="#2-完善-eslintrc-js-的-rules" class="headerlink" title="2.完善 .eslintrc.js 的 rules"></a>2.完善 .eslintrc.js 的 rules</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&quot;rules&quot;: &#123;</span><br><span class="line">    // eslint（https://eslint.bootcss.com/docs/rules/）</span><br><span class="line">    &#x27;no-var&#x27;: &#x27;error&#x27;, // 要求使用 let 或 const 而不是 var</span><br><span class="line">    &#x27;no-multiple-empty-lines&#x27;: [&#x27;warn&#x27;, &#123; max: 1 &#125;], // 不允许多个空行</span><br><span class="line">    &#x27;no-console&#x27;: process.env.NODE_ENV === &#x27;production&#x27; ? &#x27;error&#x27; : &#x27;off&#x27;,</span><br><span class="line">    &#x27;no-debugger&#x27;: process.env.NODE_ENV === &#x27;production&#x27; ? &#x27;error&#x27; : &#x27;off&#x27;,</span><br><span class="line">    &#x27;no-unexpected-multiline&#x27;: &#x27;error&#x27;, // 禁止空余的多行</span><br><span class="line">    &#x27;no-useless-escape&#x27;: &#x27;off&#x27;, // 禁止不必要的转义字符</span><br><span class="line"></span><br><span class="line">    // typeScript (https://typescript-eslint.io/rules)</span><br><span class="line">    &#x27;@typescript-eslint/no-unused-vars&#x27;: &#x27;error&#x27;, // 禁止定义未使用的变量</span><br><span class="line">    &#x27;@typescript-eslint/prefer-ts-expect-error&#x27;: &#x27;error&#x27;, // 禁止使用 @ts-ignore</span><br><span class="line">    &#x27;@typescript-eslint/no-explicit-any&#x27;: &#x27;off&#x27;, // 禁止使用 any 类型</span><br><span class="line">    &#x27;@typescript-eslint/no-non-null-assertion&#x27;: &#x27;off&#x27;,</span><br><span class="line">    &#x27;@typescript-eslint/no-namespace&#x27;: &#x27;off&#x27;, // 禁止使用自定义 TypeScript 模块和命名空间。</span><br><span class="line">    &#x27;@typescript-eslint/semi&#x27;: &#x27;off&#x27;,</span><br><span class="line"></span><br><span class="line">    // eslint-plugin-vue (https://eslint.vuejs.org/rules/)</span><br><span class="line">    &#x27;vue/multi-word-component-names&#x27;: &#x27;off&#x27;, // 要求组件名称始终为 “-” 链接的单词</span><br><span class="line">    &#x27;vue/script-setup-uses-vars&#x27;: &#x27;error&#x27;, // 防止&lt;script setup&gt;使用的变量&lt;template&gt;被标记为未使用</span><br><span class="line">    &#x27;vue/no-mutating-props&#x27;: &#x27;off&#x27;, // 不允许组件 prop的改变</span><br><span class="line">    &#x27;vue/attribute-hyphenation&#x27;: &#x27;off&#x27; // 对模板中的自定义组件强制执行属性命名样式</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="3-忽略文件"><a href="#3-忽略文件" class="headerlink" title="3.忽略文件"></a>3.忽略文件</h4><p>在项目根目录新建 <code>.eslintignore</code> 文件</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dist</span><br><span class="line">node_modules</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="4-添加命令"><a href="#4-添加命令" class="headerlink" title="4.添加命令"></a>4.添加命令</h4><p>在 <code>packjson.json</code> 中 <code>script</code> 字段添加</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;lint:eslint&quot;: &quot;eslint src --fix&quot;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2-prettier"><a href="#2-prettier" class="headerlink" title="2.prettier"></a>2.prettier</h3><h4 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm install -D eslint-plugin-prettier prettier eslint-config-prettier</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="2-配置prettier"><a href="#2-配置prettier" class="headerlink" title="2.配置prettier"></a>2.配置prettier</h4><p>根目录下新建 <code>.prettierrc.js</code> 文件</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;printWidth&quot;: 100,	//每行最多显示的字符数</span><br><span class="line">  &quot;tabWidth&quot;: 2,//tab的宽度 2个字符</span><br><span class="line">  &quot;useTabs&quot;: true,//使用tab代替空格</span><br><span class="line">  &quot;semi&quot;: false,//结尾使用分号</span><br><span class="line">  &quot;singleQuote&quot;: true,//使用单引号代替双引号</span><br><span class="line">  &quot;trailingComma&quot;: &quot;none&quot;,//结尾是否添加逗号</span><br><span class="line">  &quot;bracketSpacing&quot;: true,//对象括号俩边是否用空格隔开</span><br><span class="line">  &quot;bracketSameLine&quot;: true,;//组件最后的尖括号不另起一行</span><br><span class="line">  &quot;arrowParens&quot;: &quot;always&quot;,//箭头函数参数始终添加括号</span><br><span class="line">  &quot;htmlWhitespaceSensitivity&quot;: &quot;ignore&quot;,//html存在空格是不敏感的</span><br><span class="line">  &quot;vueIndentScriptAndStyle&quot;: false,//vue 的script和style的内容是否缩进</span><br><span class="line">  &quot;endOfLine&quot;: &quot;auto&quot;,//行结尾形式 mac和linux是\n  windows是\r\n </span><br><span class="line">  &quot;singleAttributePerLine&quot;: false //组件或者标签的属性是否控制一行只显示一个属性</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="4-忽略文件"><a href="#4-忽略文件" class="headerlink" title="4.忽略文件"></a>4.忽略文件</h4><p>根目录下新建 <code>.prettierignore</code> 文件</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/dist/*</span><br><span class="line">/html/*</span><br><span class="line">.local</span><br><span class="line">/node_modules/**</span><br><span class="line">**/*.svg</span><br><span class="line">**/*.sh</span><br><span class="line">/public/*</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="5-ESlint配置"><a href="#5-ESlint配置" class="headerlink" title="5.ESlint配置"></a>5.ESlint配置</h4><p><code>.eslintrc.js</code>的<code>extends</code>尾行</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;plugin:prettier/recommended&#x27;,</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="6-添加命令"><a href="#6-添加命令" class="headerlink" title="6.添加命令"></a>6.添加命令</h4><p>在 <code>packjson.json</code> 中 <code>script</code> 字段添加</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;format&quot;: &quot;prettier --write \&quot;./**/*.&#123;html,vue,js,ts,json,md&#125;\&quot; &quot;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="3-stylelint"><a href="#3-stylelint" class="headerlink" title="3.stylelint"></a>3.stylelint</h3><blockquote>
+<p><strong><code>stylelint</code> 是 css 的格式化工具</strong></p>
+</blockquote>
+<h4 id="1-安装-1"><a href="#1-安装-1" class="headerlink" title="1.安装"></a>1.安装</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm add sass sass-loader stylelint stylelint-config-html stylelint-config-recess-order stylelint-config-recommended-scss stylelint-config-recommended-vue stylelint-config-standard stylelint-config-standard-scss stylelint-order stylelint-prettier stylelint-scss -D</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="2-配置stylrlint"><a href="#2-配置stylrlint" class="headerlink" title="2.配置stylrlint"></a>2.配置stylrlint</h4><p>在项目根目录下新建 <code>stylelint.config.js</code>文件</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">	root: true,</span><br><span class="line">	extends: [</span><br><span class="line">		&#x27;stylelint-config-standard&#x27;, // 配置stylelint拓展插件</span><br><span class="line">		&#x27;stylelint-config-html/vue&#x27;, // 配置 vue 中 template 样式格式化</span><br><span class="line">		&#x27;stylelint-config-recess-order&#x27; // 配置stylelint css属性书写顺序插件</span><br><span class="line">	],</span><br><span class="line">	plugins: [&#x27;stylelint-order&#x27;, &#x27;stylelint-prettier&#x27;, &#x27;stylelint-scss&#x27;],</span><br><span class="line">	overrides: [</span><br><span class="line">		&#123;</span><br><span class="line">			files: [&#x27;**/*.(css|html|vue)&#x27;],</span><br><span class="line">			customSyntax: &#x27;postcss-html&#x27;</span><br><span class="line">		&#125;,</span><br><span class="line">		&#123;</span><br><span class="line">			files: [&#x27;*.scss&#x27;, &#x27;**/*.scss&#x27;],</span><br><span class="line">			customSyntax: &#x27;postcss-scss&#x27;,</span><br><span class="line">			extends: [&#x27;stylelint-config-standard-scss&#x27;, &#x27;stylelint-config-recommended-vue/scss&#x27;]</span><br><span class="line">		&#125;</span><br><span class="line">	],</span><br><span class="line">	rules: &#123;</span><br><span class="line">		&#x27;selector-class-pattern&#x27;: null, // 关闭强制选择器类名的格式</span><br><span class="line">		&#x27;no-descending-specificity&#x27;: null, // 禁止在具有较高优先级的选择器后出现被其覆盖的较低优先级的选择器</span><br><span class="line">		&#x27;scss/dollar-variable-pattern&#x27;: null, // 允许 SCSS 变量的命名采用任何模式，不做强制规定。</span><br><span class="line">		&#x27;selector-pseudo-class-no-unknown&#x27;: [</span><br><span class="line">			// 不允许未知的选择器</span><br><span class="line">			true,</span><br><span class="line">			&#123;</span><br><span class="line">				ignorePseudoClasses: [&#x27;deep&#x27;, &#x27;global&#x27;]</span><br><span class="line">			&#125;</span><br><span class="line">		],</span><br><span class="line">		&#x27;selector-pseudo-element-no-unknown&#x27;: [</span><br><span class="line">			true,</span><br><span class="line">			&#123;</span><br><span class="line">				ignorePseudoElements: [&#x27;v-deep&#x27;, &#x27;v-global&#x27;, &#x27;v-slotted&#x27;]</span><br><span class="line">			&#125;</span><br><span class="line">		],</span><br><span class="line">		&#x27;at-rule-no-unknown&#x27;: [</span><br><span class="line">			true,</span><br><span class="line">			&#123;</span><br><span class="line">				ignoreAtRules: [</span><br><span class="line">					&#x27;tailwind&#x27;,</span><br><span class="line">					&#x27;apply&#x27;,</span><br><span class="line">					&#x27;variants&#x27;,</span><br><span class="line">					&#x27;responsive&#x27;,</span><br><span class="line">					&#x27;screen&#x27;,</span><br><span class="line">					&#x27;function&#x27;,</span><br><span class="line">					&#x27;if&#x27;,</span><br><span class="line">					&#x27;each&#x27;,</span><br><span class="line">					&#x27;include&#x27;,</span><br><span class="line">					&#x27;mixin&#x27;,</span><br><span class="line">					&#x27;use&#x27;</span><br><span class="line">				]</span><br><span class="line">			&#125;</span><br><span class="line">		],</span><br><span class="line">		&#x27;rule-empty-line-before&#x27;: [</span><br><span class="line">			&#x27;always&#x27;,</span><br><span class="line">			&#123;</span><br><span class="line">				ignore: [&#x27;after-comment&#x27;, &#x27;first-nested&#x27;]</span><br><span class="line">			&#125;</span><br><span class="line">		],</span><br><span class="line">		&#x27;unit-no-unknown&#x27;: [true, &#123; ignoreUnits: [&#x27;rpx&#x27;] &#125;],</span><br><span class="line">		&#x27;order/order&#x27;: [</span><br><span class="line">			[</span><br><span class="line">				&#x27;dollar-variables&#x27;,</span><br><span class="line">				&#x27;custom-properties&#x27;,</span><br><span class="line">				&#x27;at-rules&#x27;,</span><br><span class="line">				&#x27;declarations&#x27;,</span><br><span class="line">				&#123;</span><br><span class="line">					type: &#x27;at-rule&#x27;,</span><br><span class="line">					name: &#x27;supports&#x27;</span><br><span class="line">				&#125;,</span><br><span class="line">				&#123;</span><br><span class="line">					type: &#x27;at-rule&#x27;,</span><br><span class="line">					name: &#x27;media&#x27;</span><br><span class="line">				&#125;,</span><br><span class="line">				&#x27;rules&#x27;</span><br><span class="line">			],</span><br><span class="line">			&#123; severity: &#x27;warning&#x27; &#125;</span><br><span class="line">		]</span><br><span class="line">	&#125;,</span><br><span class="line">	ignoreFiles: [&#x27;**/*.js&#x27;, &#x27;**/*.ts&#x27;, &#x27;**/*.jsx&#x27;, &#x27;**/*.tsx&#x27;]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="3-忽略文件-1"><a href="#3-忽略文件-1" class="headerlink" title="3.忽略文件"></a>3.忽略文件</h4><p>在项目根目录下新建 <code>.stylelintignore</code>文件</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/node_modules/*</span><br><span class="line">/dist/*</span><br><span class="line">/html/*</span><br><span class="line">/public/*</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="4-添加命令-1"><a href="#4-添加命令-1" class="headerlink" title="4.添加命令"></a>4.添加命令</h4><p>在 <code>packjson.json</code> 中 <code>script</code> 字段添加</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;lint:stylelint&quot;: &quot;stylelint src/**/*.&#123;css,scss,vue&#125; --cache --fix&quot;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="4-husky"><a href="#4-husky" class="headerlink" title="4.husky"></a>4.husky</h3><blockquote>
+<p>[!warning]</p>
+<p>进行前需要先将项目放到git仓库中</p>
+</blockquote>
+<h4 id="1-安装-2"><a href="#1-安装-2" class="headerlink" title="1.安装"></a>1.安装</h4><p>(最新版不会用，嘿嘿ヾ(^▽^*))))</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm install -D husky@8.0.0</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="2-添加命令"><a href="#2-添加命令" class="headerlink" title="2.添加命令"></a>2.添加命令</h4><p><code>package.json</code>的<code>scripts</code>尾行</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;prepare&quot;: &quot;husky install&quot;</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="3-配置husky"><a href="#3-配置husky" class="headerlink" title="3.配置husky"></a>3.配置husky</h4><p><code>.husky</code>文件下的<code>pre-commit</code>文件</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env sh</span><br><span class="line">. &quot;$(dirname &quot;$0&quot;)/_/husky.sh&quot;</span><br><span class="line">pnpm lint:prettier</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="5-commitlint"><a href="#5-commitlint" class="headerlink" title="5.commitlint"></a>5.commitlint</h3><h4 id="1-安装-3"><a href="#1-安装-3" class="headerlink" title="1.安装"></a>1.安装</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm add @commitlint/config-conventional @commitlint/cli -D</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="2-配置commitlint"><a href="#2-配置commitlint" class="headerlink" title="2.配置commitlint"></a>2.配置commitlint</h4><p>在项目根目录下新建 <code>commitlint.config.js </code>文件</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">	extends: [&#x27;@commitlint/config-conventional&#x27;],</span><br><span class="line">	// 校验规则</span><br><span class="line">	rules: &#123;</span><br><span class="line">		&#x27;type-enum&#x27;: [</span><br><span class="line">			2,</span><br><span class="line">			&#x27;always&#x27;,</span><br><span class="line">			[</span><br><span class="line">				&#x27;feat&#x27;, //增加新功能</span><br><span class="line">				&#x27;fix&#x27;, //修复问题/BUG</span><br><span class="line">				&#x27;perf&#x27;, //优化/性能提升</span><br><span class="line">				&#x27;style&#x27;, //代码风格相关无影响运行结果的</span><br><span class="line">				&#x27;docs&#x27;, //文档/注释</span><br><span class="line">				&#x27;test&#x27;, //测试相关</span><br><span class="line">				&#x27;refactor&#x27;, //重构</span><br><span class="line">				&#x27;build&#x27;, //构建系统或外部依赖项的更改</span><br><span class="line">				&#x27;ci&#x27;, //持续集成</span><br><span class="line">				&#x27;chore&#x27;, //杂项，不涉及源代码或测试文件的更改</span><br><span class="line">				&#x27;revert&#x27;, //撤销修改</span><br><span class="line">				&#x27;wip&#x27;, //开发中</span><br><span class="line">				&#x27;workflow&#x27;, //工作流改进</span><br><span class="line">				&#x27;types&#x27;, //类型定义文件更改</span><br><span class="line">				&#x27;release&#x27; //发布新版本</span><br><span class="line">			]</span><br><span class="line">		],</span><br><span class="line">		&#x27;type-case&#x27;: [0],</span><br><span class="line">		&#x27;type-empty&#x27;: [0],</span><br><span class="line">		&#x27;scope-empty&#x27;: [0],</span><br><span class="line">		&#x27;scope-case&#x27;: [0],</span><br><span class="line">		&#x27;subject-full-stop&#x27;: [0, &#x27;never&#x27;],</span><br><span class="line">		&#x27;subject-case&#x27;: [0, &#x27;never&#x27;],</span><br><span class="line">		&#x27;header-max-length&#x27;: [0, &#x27;always&#x27;, 72]</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="3-添加命令"><a href="#3-添加命令" class="headerlink" title="3.添加命令"></a>3.添加命令</h4><p>在 <code>packjson.json</code> 中 <code>script</code> 字段添加</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;commitlint&quot;: &quot;commitlint --config commitlint.config.js -e -V&quot;</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="4-搭配husky"><a href="#4-搭配husky" class="headerlink" title="4.搭配husky"></a>4.搭配husky</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx husky add .husky/commit-msg </span><br></pre></td></tr></table></figure></div>
+
+<p>在根目录下 <code>husky</code>文件夹中的 <code>commit-msg</code></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env sh</span><br><span class="line">. &quot;$(dirname -- &quot;$0&quot;)/_/husky.sh&quot;</span><br><span class="line">pnpm commitlint</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="6-EditorConfig"><a href="#6-EditorConfig" class="headerlink" title="6.EditorConfig"></a>6.EditorConfig</h3><p>在项目根目录下新建 <code>.editorconfig </code>文件</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># Editor configuration, see http://editorconfig.org</span><br><span class="line"></span><br><span class="line"># 表示是最顶层的 EditorConfig 配置文件</span><br><span class="line">root = true</span><br><span class="line"></span><br><span class="line">[*] # 表示所有文件适用</span><br><span class="line">charset = utf-8 # 设置文件字符集为 utf-8</span><br><span class="line">indent_style = space # 缩进风格（tab | space）</span><br><span class="line">indent_size = 2 # 缩进大小</span><br><span class="line">end_of_line = lf # 控制换行类型(lf | cr | crlf)</span><br><span class="line">trim_trailing_whitespace = true # 去除行首的任意空白字符</span><br><span class="line">insert_final_newline = true # 始终在文件末尾插入一个新行</span><br><span class="line"></span><br><span class="line">[*.md] # 表示仅 md 文件适用以下规则</span><br><span class="line">max_line_length = off</span><br><span class="line">trim_trailing_whitespace = false</span><br></pre></td></tr></table></figure></div>
+
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 代码风格控制</li>
+        <li><strong>Author:</strong> peng</li>
+        <li><strong>Created at
+                :</strong> 2024-05-15 19:57:21</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2024-05-15 20:01:43
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://github.com/PengCanY/2024/05/15/team-development/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+            This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+            
+
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2024/05/15/node.js_installation_tutorial/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">node安装教程(windows)</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/05/15/gnvm_use/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">GNVM多版本控制器</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container">
+                <div class="comments-container pjax">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+ 
+    <div id="waline"></div>
+    <script type="module"  data-swup-reload-script>
+        import { init } from '/js/libs/waline.mjs';
+
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://example.example.com',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
+        }
+
+        if ('true') {
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadWaline);
+        }
+        
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">代码风格控制</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC%E6%8E%A7%E5%88%B6-%E5%9B%A2%E9%98%9F%E5%BC%80%E5%8F%91%EF%BC%8C%E5%88%9D%E5%AD%A6%E8%B7%B3%E8%BF%87"><span class="nav-text">代码风格控制(团队开发，初学跳过)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-ESlint"><span class="nav-text">1.ESlint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-prettier"><span class="nav-text">2.prettier</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-stylelint"><span class="nav-text">3.stylelint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-husky"><span class="nav-text">4.husky</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-commitlint"><span class="nav-text">5.commitlint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-EditorConfig"><span class="nav-text">6.EditorConfig</span></a></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">peng</a>
+        </div>
+        
+            <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.5.0</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+</body>
+</html>
